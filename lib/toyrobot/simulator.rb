@@ -8,13 +8,14 @@ module ToyRobot
       commands = {
         'PLACE' => [[:number, :number, :string],
                     [nil, nil, '^NORTH$|^SOUTH$|^EAST$|^WEST$']],
-        'MOVE' => [[], []], 'LEFT' => [[], []],
-        'RIGHT' => [[], []], 'REPORT' => [[], []]
+        'MOVE' => [[], []],
+        'LEFT' => [[], []],
+        'RIGHT' => [[], []],
+        'REPORT' => [[], []]
       }
       @command_parser = CommandParser.new(commands)
       @table          = Table.new max_x, max_y
       @toy_robot      = Robot.new
-      logger.info 'Simulator created successfully.'
     end
 
     def execute(input)

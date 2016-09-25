@@ -6,7 +6,6 @@ module ToyRobot
     def initialize
       @position  = nil
       @placed    = false
-      logger.info 'Robot created successfully.'
     end
 
     def place(x, y, face)
@@ -28,7 +27,7 @@ module ToyRobot
 
     def to_s
       if @placed
-        "Placed at #{@position}"
+        "#{@position.x},#{@position.y},#{@position.direction}"
       else
         'Not placed'
       end

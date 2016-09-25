@@ -5,7 +5,6 @@ module ToyRobot
     def initialize(max_x, max_y)
       @max_x = max_x
       @max_y = max_y
-      logger.info "Table boundaries are #{@max_x},#{@max_y}"
     end
 
     def inside?(x, y)

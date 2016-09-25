@@ -22,7 +22,7 @@ module ToyRobot
     def read_command
       print '# ' if @input_file == STDIN
       command = @input_file.gets
-      exit if command.nil? || (command.chomp.casecmp('.quit') == 0)
+      exit if command.nil? || (command.chomp.casecmp('exit') == 0) || (command.chomp.casecmp('quit') == 0)
       command
     end
   end
